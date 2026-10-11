@@ -22,21 +22,31 @@ proyecto final:
   dimensional (modelo estrella) derivado del OLTP, compuesto por una tabla
   de hechos y sus tablas de dimensión.
 
-## Estructura esperada
+## Estructura del repositorio
 
 ```
+diseno/
+├── modelo-estrella.md       (justificacion del diseño: Fact, Dim, por que)
+├── diagrama-estrella.md     (diagrama entidad-relacion, Mermaid)
+└── pruebas-integridad.sql   (script de validacion del modelo implementado)
+
 NorthWindOLTP/
-└── (generado por Visual Studio al crear el SQL Server Database Project
-    e importar la base NorthWind restaurada)
+└── (SQL Server Database Project generado en Visual Studio, importando
+    el esquema OLTP original de NorthWind)
 
 NorthWindDW/
-└── (generado por Visual Studio con las tablas de dimensiones y hechos
-    del modelo estrella)
+└── (SQL Server Database Project generado en Visual Studio con las
+    tablas de dimensiones y hechos del modelo estrella)
 
 README.md
 ```
 
 ## Diseño del modelo estrella
+
+El diseño completo, con la justificación de negocio detrás de cada
+decisión, está documentado en [`diseno/modelo-estrella.md`](./diseno/modelo-estrella.md)
+y su diagrama en [`diseno/diagrama-estrella.md`](./diseno/diagrama-estrella.md).
+Resumen:
 
 - **Tabla de hechos — `FactSales`**: una fila por cada línea de detalle de
   una orden (un producto dentro de un pedido), fusionando `Orders` +
@@ -52,10 +62,16 @@ README.md
 
 ## Flujo de trabajo del grupo
 
-Cada integrante trabaja en Visual Studio y sube su proyecto mediante un
+Cada integrante trabaja en su propia rama y entrega su parte mediante un
 Pull Request hacia `main`:
 
+- **Angel**: diseño del modelo estrella, diagrama y script de pruebas de
+  integridad (carpeta [`diseno/`](./diseno/)).
 - **Daniela**: crea `NorthWindOLTP/` (SQL Server Database Project →
   Import Database, apuntando a la base NorthWind ya restaurada).
 - **Kevin**: crea `NorthWindDW/` (SQL Server Database Project con las
-  tablas del modelo estrella descrito arriba).
+  tablas del modelo estrella descrito en `diseno/modelo-estrella.md`).
+
+Una vez que `NorthWindOLTP/` y `NorthWindDW/` existan, correr
+[`diseno/pruebas-integridad.sql`](./diseno/pruebas-integridad.sql) contra
+ambas bases para confirmar que la implementación respeta el diseño.
