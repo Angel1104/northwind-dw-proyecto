@@ -58,6 +58,8 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Tables\dbo" />
+    <Folder Include="Views" />
+    <Folder Include="Views\dbo" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\dbo\DimDate.sql" />
@@ -66,5 +68,8 @@
     <Build Include="Tables\dbo\DimProduct.sql" />
     <Build Include="Tables\dbo\DimShipper.sql" />
     <Build Include="Tables\dbo\FactSales.sql" />
+    <Build Include="Views\dbo\vw_VentasPorCategoria.sql" />
+    <Build Include="Views\dbo\vw_TopClientes.sql" />
+    <Build Include="Views\dbo\vw_VentasPorEmpleado.sql" />
   </ItemGroup>
 </Project>
