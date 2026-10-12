@@ -1,0 +1,6 @@
+C:\Users\DELL\source\repos\NorthWindDW\NorthWindDW\bin\Debug\NorthWindDW.dacpac
+C:\Users\DELL\source\repos\NorthWindDW\NorthWindDW\bin\Debug\NorthWindDW.dll
+C:\Users\DELL\source\repos\NorthWindDW\NorthWindDW\bin\Debug\NorthWindDW.pdb
+C:\Users\DELL\source\repos\NorthWindDW\NorthWindDW\obj\Debug\NorthWindDW.sqlproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\NorthWindDW\NorthWindDW\obj\Debug\NorthWindDW.dll
+C:\Users\DELL\source\repos\NorthWindDW\NorthWindDW\obj\Debug\NorthWindDW.pdb

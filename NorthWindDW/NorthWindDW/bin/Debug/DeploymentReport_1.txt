@@ -1,0 +1,29 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[DimCustomer] (Table)
+       [dbo].[DimEmployee] (Table)
+       [dbo].[DimProduct] (Table)
+       [dbo].[DimShipper] (Table)
+       [dbo].[FactSales] (Table)
+       [dbo].[FK_FactSales_DimDate_Order] (Foreign Key)
+       [dbo].[FK_FactSales_DimDate_Required] (Foreign Key)
+       [dbo].[FK_FactSales_DimDate_Shipped] (Foreign Key)
+       [dbo].[FK_FactSales_DimCustomer] (Foreign Key)
+       [dbo].[FK_FactSales_DimProduct] (Foreign Key)
+       [dbo].[FK_FactSales_DimEmployee] (Foreign Key)
+       [dbo].[FK_FactSales_DimShipper] (Foreign Key)
+
+** Supporting actions
+
+The project and target databases have different collation settings. Deployment errors might occur.
+
