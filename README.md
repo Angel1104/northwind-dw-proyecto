@@ -7,8 +7,8 @@ Docente: M.Sc. Juan Marcelo Claure Salinas
 ## Integrantes del grupo
 
 - Angel Christian Flores Lazarte ([Angel1104](https://github.com/Angel1104))
-- [Nombre completo] ([DanieZapata](https://github.com/DanieZapata))
-- [Nombre completo] ([kevdev21](https://github.com/kevdev21))
+- Daniela Zapata Pari ([DanieZapata](https://github.com/DanieZapata))
+- Kevin Omar Mamani Quispe ([kevdev21](https://github.com/kevdev21))
 
 ## Descripción
 
