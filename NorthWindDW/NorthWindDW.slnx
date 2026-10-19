@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="NorthWindDW/NorthWindDW.sqlproj">
+  <Project Path="NorthWindDW/NorthWindDW.sqlproj" Id="7d72c5fd-daf3-423e-9b35-a340a7d933b1">
     <Build />
     <Deploy />
   </Project>
