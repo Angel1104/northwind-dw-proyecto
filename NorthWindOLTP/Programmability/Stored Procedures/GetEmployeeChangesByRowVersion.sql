@@ -22,16 +22,16 @@ BEGIN
         e.[Country],
         e.[HomePhone],
         e.[Extension],
-        e.[Photo],
         e.[Notes],
         e.[ReportsTo],
-        e.[PhotoPath],
+        et.[TerritoryID],
         t.[TerritoryDescription],
+        r.[RegionID],
         r.[RegionDescription]
     FROM [dbo].[Employees] e
-    INNER JOIN [dbo].[EmployeeTerritories] et ON e.EmployeeID = et.EmployeeID
-    INNER JOIN [dbo].[Territories] t ON et.TerritoryID = t.TerritoryID
-    INNER JOIN [dbo].[Region] r ON t.RegionID = r.RegionID
+    LEFT JOIN [dbo].[EmployeeTerritories] et ON e.EmployeeID = et.EmployeeID
+    LEFT JOIN [dbo].[Territories] t ON et.TerritoryID = t.TerritoryID
+    LEFT JOIN [dbo].[Region] r ON t.RegionID = r.RegionID
     WHERE
         (e.[rowversion] > CONVERT(ROWVERSION, @startRow) AND e.[rowversion] <= CONVERT(ROWVERSION, @endRow))
         OR (et.[rowversion] > CONVERT(ROWVERSION, @startRow) AND et.[rowversion] <= CONVERT(ROWVERSION, @endRow))
