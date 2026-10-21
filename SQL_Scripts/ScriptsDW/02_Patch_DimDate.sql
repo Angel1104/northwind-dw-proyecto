@@ -16,13 +16,13 @@ INSERT INTO [dbo].[DimDate]
            ,[CalendarSemester])
      VALUES
            (0
-           ,GETDATE()
+           ,'1900-01-01'
            ,0
-           ,''
+           ,'N/A'
            ,0
            ,0
-           ,1
-           ,''
+           ,0
+           ,'N/A'
            ,0
            ,0
            ,0
