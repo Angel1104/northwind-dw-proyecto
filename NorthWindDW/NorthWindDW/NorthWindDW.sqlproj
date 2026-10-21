@@ -60,6 +60,10 @@
     <Folder Include="Tables\dbo" />
     <Folder Include="Views" />
     <Folder Include="Views\dbo" />
+    <Folder Include="Tables\staging" />
+    <Folder Include="Schema" />
+    <Folder Include="Programmability" />
+    <Folder Include="Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\dbo\DimDate.sql" />
@@ -71,5 +75,19 @@
     <Build Include="Views\dbo\vw_VentasPorCategoria.sql" />
     <Build Include="Views\dbo\vw_TopClientes.sql" />
     <Build Include="Views\dbo\vw_VentasPorEmpleado.sql" />
+    <Build Include="Tables\dbo\PackageConfig.sql" />
+    <Build Include="Tables\staging\customer.sql" />
+    <Build Include="Schema\staging.sql" />
+    <Build Include="Tables\staging\employee.sql" />
+    <Build Include="Tables\staging\shipper.sql" />
+    <Build Include="Tables\staging\product.sql" />
+    <Build Include="Tables\staging\sales.sql" />
+    <Build Include="Programmability\Stored Procedures\GetLastPackageRowVersion.sql" />
+    <Build Include="Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
+    <Build Include="Programmability\Stored Procedures\DW_MergeDimEmployee.sql" />
+    <Build Include="Programmability\Stored Procedures\DW_MergeDimProduct.sql" />
+    <Build Include="Programmability\Stored Procedures\DW_MergeDimShipper.sql" />
+    <Build Include="Programmability\Stored Procedures\DW_MergeFactSales.sql" />
+    <Build Include="Programmability\Stored Procedures\UpdateLastPackageRowVersion.sql" />
   </ItemGroup>
 </Project>
