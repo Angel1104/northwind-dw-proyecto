@@ -103,5 +103,6 @@
     <Build Include="Views\Summary Of Sales By Quarter.sql" />
     <Build Include="Views\Summary Of Sales By Year.sql" />
     <Build Include="Programmability\Stored Procedures\GetShipperChangesByRowVersion.sql" />
+    <Build Include="Programmability\Stored Procedures\GetSalesChangesByRowVersion.sql" />
   </ItemGroup>
 </Project>
