@@ -65,13 +65,3 @@ Resumen:
 Cada integrante trabaja en su propia rama y entrega su parte mediante un
 Pull Request hacia `main`:
 
-- **Angel**: diseño del modelo estrella, diagrama y script de pruebas de
-  integridad (carpeta [`diseno/`](./diseno/)).
-- **Daniela**: crea `NorthWindOLTP/` (SQL Server Database Project →
-  Import Database, apuntando a la base NorthWind ya restaurada).
-- **Kevin**: crea `NorthWindDW/` (SQL Server Database Project con las
-  tablas del modelo estrella descrito en `diseno/modelo-estrella.md`).
-
-Una vez que `NorthWindOLTP/` y `NorthWindDW/` existan, correr
-[`diseno/pruebas-integridad.sql`](./diseno/pruebas-integridad.sql) contra
-ambas bases para confirmar que la implementación respeta el diseño.
