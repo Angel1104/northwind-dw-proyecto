@@ -48,6 +48,15 @@ La contraseña no se guarda en el repositorio. El PBIX conserva los datos
 importados para la presentación; para actualizarlo en otra PC hay que restaurar
 el backup, cargar el DW y configurar credenciales SQL locales.
 
+## Requerimientos de negocio
+
+| Solicitante simulado | Pregunta y decisión posible | Medidas y dimensiones | Página |
+|---|---|---|---|
+| Gerencia comercial | ¿Cómo evolucionan las ventas? Investigar caídas y priorizar seguimiento. | Ventas netas, pedidos, unidades, ticket; fecha de pedido | Resumen de ventas |
+| Gestión de productos | ¿Qué categorías y productos concentran ventas? Priorizar surtido. | Ventas netas, unidades; categoría, producto | Productos y clientes |
+| Gestión de clientes | ¿Qué clientes y países aportan más? Orientar seguimiento comercial. | Ventas netas, pedidos, ticket; cliente, país del cliente | Productos y clientes |
+| Supervisión comercial | ¿Cómo se distribuyen ventas por empleado? Investigar diferencias de cartera. | Ventas netas, pedidos, ticket; empleado | Desempeño comercial |
+
 ## Modelo y medidas
 
 El modelo tiene relaciones 1:* de cada dimensión hacia `FactSales`, con filtro

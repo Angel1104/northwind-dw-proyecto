@@ -152,7 +152,18 @@ tabular y se confirmaron los siguientes resultados:
 No se encontraron duplicados en `(OrderID, ProductID)` ni claves huérfanas.
 Las cuatro páginas se renderizaron y sus capturas se guardaron en `capturas/`.
 
-## 9. Hallazgos de negocio
+## 9. Tabla de evidencia
+
+| Criterio | Estado | Archivo/captura | Observaciones |
+|---|---|---|---|
+| Modelo con métricas DAX | Completo | medidas.dax, model.bim | 7 medidas, relaciones 1:* verificadas |
+| Requerimientos de negocio | Completo | README.md | 4 áreas simuladas con pregunta y decisión |
+| Home con navegación | Completo | capturas/Inicio.png | Índice con indicadores e integrantes |
+| Legibilidad y diseño | Completo | tema-northwind.json | Paleta consistente, tipografía legible |
+| Filtros e interacciones | Completo | Todas las páginas | Slicers Año/Mes en cada página |
+| Conciliación de cifras | Completo | validacion.sql | 8 controles SQL vs PBI, todos coinciden |
+
+## 10. Hallazgos de negocio
 
 - En todo el período, Beverages lidera las ventas con 267.868,18 en 354
   pedidos, equivalente al 21,16 % del total. Se recomienda revisar inventario y
@@ -166,7 +177,7 @@ Las cuatro páginas se renderizaron y sus capturas se guardaron en `capturas/`.
 El último año es parcial: los datos de 1998 terminan el 6 de mayo. La caída del
 último punto no debe interpretarse como deterioro anual.
 
-## 10. Entregables
+## 11. Entregables
 
 - `NorthWind-Visualizacion.pbix`: reporte funcional con los datos importados.
 - `NorthWind-Visualizacion.pbip`: acceso al proyecto editable.

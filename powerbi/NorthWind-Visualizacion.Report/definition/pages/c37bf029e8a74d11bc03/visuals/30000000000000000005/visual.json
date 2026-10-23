@@ -117,7 +117,23 @@
                                                                                                         }
                                                                             }
                                                          }
-                                                     ]
+                                                     ],
+                                   "columnFormatting":  [
+                                                            {
+                                                                "properties":  {
+                                                                                   "labelDisplayUnits":  {
+                                                                                                              "expr":  {
+                                                                                                                           "Literal":  {
+                                                                                                                                           "Value":  "1000D"
+                                                                                                                                       }
+                                                                                                                       }
+                                                                                                          }
+                                                                               },
+                                                                "selector":  {
+                                                                                 "metadata":  "FactSales.Ticket promedio"
+                                                                             }
+                                                            }
+                                                        ]
                                },
                    "visualContainerObjects":  {
                                                   "title":  [
