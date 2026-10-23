@@ -1,0 +1,247 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+    "name":  "20000000000000000005",
+    "position":  {
+                     "x":  24,
+                     "y":  112,
+                     "z":  5,
+                     "height":  300,
+                     "width":  392,
+                     "tabOrder":  5
+                 },
+    "visual":  {
+                   "visualType":  "barChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "Product"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "ProductName"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "Product.ProductName",
+                                                                                             "nativeQueryRef":  "ProductName",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Measure":  {
+                                                                                                                    "Expression":  {
+                                                                                                                                       "SourceRef":  {
+                                                                                                                                                         "Entity":  "FactSales"
+                                                                                                                                                     }
+                                                                                                                                   },
+                                                                                                                    "Property":  "Ventas netas"
+                                                                                                                }
+                                                                                                },
+                                                                                      "queryRef":  "FactSales.Ventas netas",
+                                                                                      "nativeQueryRef":  "Ventas netas"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Measure":  {
+                                                                                                       "Expression":  {
+                                                                                                                          "SourceRef":  {
+                                                                                                                                            "Entity":  "FactSales"
+                                                                                                                                        }
+                                                                                                                      },
+                                                                                                       "Property":  "Ventas netas"
+                                                                                                   }
+                                                                                   },
+                                                                         "direction":  "Descending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "objects":  {
+                                   "labels":  [
+                                                  {
+                                                      "properties":  {
+                                                                         "show":  {
+                                                                                      "expr":  {
+                                                                                                   "Literal":  {
+                                                                                                                   "Value":  "true"
+                                                                                                               }
+                                                                                               }
+                                                                                  },
+                                                                         "fontSize":  {
+                                                                                          "expr":  {
+                                                                                                       "Literal":  {
+                                                                                                                       "Value":  "9D"
+                                                                                                                   }
+                                                                                                   }
+                                                                                      }
+                                                                     }
+                                                  }
+                                              ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "true"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Top 10 productos por ventas\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "fontSize":  {
+                                                                                                        "expr":  {
+                                                                                                                     "Literal":  {
+                                                                                                                                     "Value":  "13D"
+                                                                                                                                 }
+                                                                                                                 }
+                                                                                                    },
+                                                                                       "fontColor":  {
+                                                                                                         "solid":  {
+                                                                                                                       "color":  {
+                                                                                                                                     "expr":  {
+                                                                                                                                                  "Literal":  {
+                                                                                                                                                                  "Value":  "\u0027#1B263B\u0027"
+                                                                                                                                                              }
+                                                                                                                                              }
+                                                                                                                                 }
+                                                                                                                   }
+                                                                                                     }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              }
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "Filter82253bce461d48a89f8875b3",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "Product"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "ProductName"
+                                                                      }
+                                                       },
+                                             "type":  "TopN",
+                                             "filter":  {
+                                                            "Version":  2,
+                                                            "From":  [
+                                                                         {
+                                                                             "Name":  "subquery",
+                                                                             "Expression":  {
+                                                                                                "Subquery":  {
+                                                                                                                 "Query":  {
+                                                                                                                               "Version":  2,
+                                                                                                                               "From":  [
+                                                                                                                                            {
+                                                                                                                                                "Name":  "p",
+                                                                                                                                                "Entity":  "Product",
+                                                                                                                                                "Type":  0
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                                "Name":  "f",
+                                                                                                                                                "Entity":  "FactSales",
+                                                                                                                                                "Type":  0
+                                                                                                                                            }
+                                                                                                                                        ],
+                                                                                                                               "Select":  [
+                                                                                                                                              {
+                                                                                                                                                  "Column":  {
+                                                                                                                                                                 "Expression":  {
+                                                                                                                                                                                    "SourceRef":  {
+                                                                                                                                                                                                      "Source":  "p"
+                                                                                                                                                                                                  }
+                                                                                                                                                                                },
+                                                                                                                                                                 "Property":  "ProductName"
+                                                                                                                                                             },
+                                                                                                                                                  "Name":  "field"
+                                                                                                                                              }
+                                                                                                                                          ],
+                                                                                                                               "OrderBy":  [
+                                                                                                                                               {
+                                                                                                                                                   "Direction":  2,
+                                                                                                                                                   "Expression":  {
+                                                                                                                                                                      "Aggregation":  {
+                                                                                                                                                                                          "Expression":  {
+                                                                                                                                                                                                             "Column":  {
+                                                                                                                                                                                                                            "Expression":  {
+                                                                                                                                                                                                                                               "SourceRef":  {
+                                                                                                                                                                                                                                                                 "Source":  "f"
+                                                                                                                                                                                                                                                             }
+                                                                                                                                                                                                                                           },
+                                                                                                                                                                                                                            "Property":  "TotalVenta"
+                                                                                                                                                                                                                        }
+                                                                                                                                                                                                         },
+                                                                                                                                                                                          "Function":  0
+                                                                                                                                                                                      }
+                                                                                                                                                                  }
+                                                                                                                                               }
+                                                                                                                                           ],
+                                                                                                                               "Top":  10
+                                                                                                                           }
+                                                                                                             }
+                                                                                            },
+                                                                             "Type":  2
+                                                                         },
+                                                                         {
+                                                                             "Name":  "p",
+                                                                             "Entity":  "Product",
+                                                                             "Type":  0
+                                                                         }
+                                                                     ],
+                                                            "Where":  [
+                                                                          {
+                                                                              "Condition":  {
+                                                                                                "In":  {
+                                                                                                           "Expressions":  [
+                                                                                                                               {
+                                                                                                                                   "Column":  {
+                                                                                                                                                  "Expression":  {
+                                                                                                                                                                     "SourceRef":  {
+                                                                                                                                                                                       "Source":  "p"
+                                                                                                                                                                                   }
+                                                                                                                                                                 },
+                                                                                                                                                  "Property":  "ProductName"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                                           ],
+                                                                                                           "Table":  {
+                                                                                                                         "SourceRef":  {
+                                                                                                                                           "Source":  "subquery"
+                                                                                                                                       }
+                                                                                                                     }
+                                                                                                       }
+                                                                                            }
+                                                                          }
+                                                                      ]
+                                                        },
+                                             "howCreated":  "User"
+                                         }
+                                     ]
+                     }
+}

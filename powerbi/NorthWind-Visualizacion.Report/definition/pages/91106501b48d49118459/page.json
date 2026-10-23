@@ -1,0 +1,8 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+    "name":  "91106501b48d49118459",
+    "displayName":  "Resumen de ventas",
+    "displayOption":  "FitToPage",
+    "height":  720,
+    "width":  1280
+}

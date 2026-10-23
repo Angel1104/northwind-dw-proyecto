@@ -1,0 +1,68 @@
+// Consultas de control para DAX Query View o una herramienta conectada al
+// modelo Import local de Power BI. No modifican el modelo.
+
+// 1. Totales generales: comparar con las cuatro tarjetas principales.
+EVALUATE
+ROW (
+    "Ventas netas", SUM ( FactSales[TotalVenta] ),
+    "Unidades", SUM ( FactSales[Quantity] ),
+    "Pedidos", DISTINCTCOUNT ( FactSales[OrderID] ),
+    "Ticket promedio",
+        DIVIDE (
+            SUM ( FactSales[TotalVenta] ),
+            DISTINCTCOUNT ( FactSales[OrderID] )
+        )
+)
+
+// 2. Totales por año: verificar filtros y detectar el período final parcial.
+EVALUATE
+SUMMARIZECOLUMNS (
+    'Date'[CalendarYear],
+    FILTER ( ALL ( 'Date'[DateKey] ), 'Date'[DateKey] <> 0 ),
+    "Ventas netas", SUM ( FactSales[TotalVenta] ),
+    "Unidades", SUM ( FactSales[Quantity] ),
+    "Pedidos", DISTINCTCOUNT ( FactSales[OrderID] ),
+    "Ticket promedio",
+        DIVIDE (
+            SUM ( FactSales[TotalVenta] ),
+            DISTINCTCOUNT ( FactSales[OrderID] )
+        )
+)
+ORDER BY 'Date'[CalendarYear]
+
+// 3. Totales por año y mes. Ordenar por año y número, no alfabéticamente.
+EVALUATE
+SUMMARIZECOLUMNS (
+    'Date'[CalendarYear],
+    'Date'[MonthNumberOfYear],
+    'Date'[MonthName],
+    FILTER ( ALL ( 'Date'[DateKey] ), 'Date'[DateKey] <> 0 ),
+    "Ventas netas", SUM ( FactSales[TotalVenta] ),
+    "Pedidos", DISTINCTCOUNT ( FactSales[OrderID] )
+)
+ORDER BY 'Date'[CalendarYear], 'Date'[MonthNumberOfYear]
+
+// 4. Contraste por categoría.
+EVALUATE
+SUMMARIZECOLUMNS (
+    Product[CategoryName],
+    "Ventas netas", SUM ( FactSales[TotalVenta] ),
+    "Unidades", SUM ( FactSales[Quantity] ),
+    "Pedidos", DISTINCTCOUNT ( FactSales[OrderID] )
+)
+ORDER BY [Ventas netas] DESC
+
+// 5. Empleados con ticket calculado por pedido, no por línea.
+EVALUATE
+SUMMARIZECOLUMNS (
+    Employee[Full Name],
+    "Ventas netas", SUM ( FactSales[TotalVenta] ),
+    "Pedidos", DISTINCTCOUNT ( FactSales[OrderID] ),
+    "Ticket promedio",
+        DIVIDE (
+            SUM ( FactSales[TotalVenta] ),
+            DISTINCTCOUNT ( FactSales[OrderID] )
+        )
+)
+ORDER BY [Ventas netas] DESC
+

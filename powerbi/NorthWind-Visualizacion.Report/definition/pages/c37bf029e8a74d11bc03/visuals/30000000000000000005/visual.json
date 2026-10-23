@@ -1,0 +1,179 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+    "name":  "30000000000000000005",
+    "position":  {
+                     "x":  432,
+                     "y":  112,
+                     "z":  5,
+                     "height":  584,
+                     "width":  392,
+                     "tabOrder":  5
+                 },
+    "visual":  {
+                   "visualType":  "pivotTable",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Rows":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Column":  {
+                                                                                                                      "Expression":  {
+                                                                                                                                         "SourceRef":  {
+                                                                                                                                                           "Entity":  "Employee"
+                                                                                                                                                       }
+                                                                                                                                     },
+                                                                                                                      "Property":  "Full Name"
+                                                                                                                  }
+                                                                                                   },
+                                                                                         "queryRef":  "Employee.Full Name",
+                                                                                         "nativeQueryRef":  "Full Name"
+                                                                                     }
+                                                                                 ]
+                                                             },
+                                                    "Values":  {
+                                                                   "projections":  [
+                                                                                       {
+                                                                                           "field":  {
+                                                                                                         "Measure":  {
+                                                                                                                         "Expression":  {
+                                                                                                                                            "SourceRef":  {
+                                                                                                                                                              "Entity":  "FactSales"
+                                                                                                                                                          }
+                                                                                                                                        },
+                                                                                                                         "Property":  "Ventas netas"
+                                                                                                                     }
+                                                                                                     },
+                                                                                           "queryRef":  "FactSales.Ventas netas",
+                                                                                           "nativeQueryRef":  "Ventas netas"
+                                                                                       },
+                                                                                       {
+                                                                                           "field":  {
+                                                                                                         "Measure":  {
+                                                                                                                         "Expression":  {
+                                                                                                                                            "SourceRef":  {
+                                                                                                                                                              "Entity":  "FactSales"
+                                                                                                                                                          }
+                                                                                                                                        },
+                                                                                                                         "Property":  "Pedidos"
+                                                                                                                     }
+                                                                                                     },
+                                                                                           "queryRef":  "FactSales.Pedidos",
+                                                                                           "nativeQueryRef":  "Pedidos"
+                                                                                       },
+                                                                                       {
+                                                                                           "field":  {
+                                                                                                         "Measure":  {
+                                                                                                                         "Expression":  {
+                                                                                                                                            "SourceRef":  {
+                                                                                                                                                              "Entity":  "FactSales"
+                                                                                                                                                          }
+                                                                                                                                        },
+                                                                                                                         "Property":  "Ticket promedio"
+                                                                                                                     }
+                                                                                                     },
+                                                                                           "queryRef":  "FactSales.Ticket promedio",
+                                                                                           "nativeQueryRef":  "Ticket promedio"
+                                                                                       }
+                                                                                   ]
+                                                               }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Measure":  {
+                                                                                                       "Expression":  {
+                                                                                                                          "SourceRef":  {
+                                                                                                                                            "Entity":  "FactSales"
+                                                                                                                                        }
+                                                                                                                      },
+                                                                                                       "Property":  "Ventas netas"
+                                                                                                   }
+                                                                                   },
+                                                                         "direction":  "Descending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "objects":  {
+                                   "columnHeaders":  [
+                                                         {
+                                                             "properties":  {
+                                                                                "columnAdjustment":  {
+                                                                                                         "expr":  {
+                                                                                                                      "Literal":  {
+                                                                                                                                      "Value":  "\u0027growToFit\u0027"
+                                                                                                                                  }
+                                                                                                                  }
+                                                                                                     },
+                                                                                "autoSizeColumnWidth":  {
+                                                                                                            "expr":  {
+                                                                                                                         "Literal":  {
+                                                                                                                                         "Value":  "true"
+                                                                                                                                     }
+                                                                                                                     }
+                                                                                                        }
+                                                                            }
+                                                         }
+                                                     ],
+                                   "columnFormatting":  [
+                                                            {
+                                                                "properties":  {
+                                                                                   "labelDisplayUnits":  {
+                                                                                                              "expr":  {
+                                                                                                                           "Literal":  {
+                                                                                                                                           "Value":  "1000D"
+                                                                                                                                       }
+                                                                                                                       }
+                                                                                                          }
+                                                                               },
+                                                                "selector":  {
+                                                                                 "metadata":  "FactSales.Ticket promedio"
+                                                                             }
+                                                            }
+                                                        ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "true"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Indicadores por empleado\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "fontSize":  {
+                                                                                                        "expr":  {
+                                                                                                                     "Literal":  {
+                                                                                                                                     "Value":  "13D"
+                                                                                                                                 }
+                                                                                                                 }
+                                                                                                    },
+                                                                                       "fontColor":  {
+                                                                                                         "solid":  {
+                                                                                                                       "color":  {
+                                                                                                                                     "expr":  {
+                                                                                                                                                  "Literal":  {
+                                                                                                                                                                  "Value":  "\u0027#1B263B\u0027"
+                                                                                                                                                              }
+                                                                                                                                              }
+                                                                                                                                 }
+                                                                                                                   }
+                                                                                                     }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              }
+               }
+}

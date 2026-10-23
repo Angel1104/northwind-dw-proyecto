@@ -1,0 +1,207 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+    "name":  "00000000000000000004",
+    "position":  {
+                     "x":  24,
+                     "y":  160,
+                     "z":  4,
+                     "height":  120,
+                     "width":  1232,
+                     "tabOrder":  4
+                 },
+    "visual":  {
+                   "visualType":  "cardVisual",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Data":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "FactSales"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Ventas netas"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "FactSales.Ventas netas",
+                                                                                         "nativeQueryRef":  "Ventas netas"
+                                                                                     },
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "FactSales"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Unidades"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "FactSales.Unidades",
+                                                                                         "nativeQueryRef":  "Unidades"
+                                                                                     },
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "FactSales"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Pedidos"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "FactSales.Pedidos",
+                                                                                         "nativeQueryRef":  "Pedidos"
+                                                                                     },
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "FactSales"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Ticket promedio"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "FactSales.Ticket promedio",
+                                                                                         "nativeQueryRef":  "Ticket promedio"
+                                                                                     }
+                                                                                 ]
+                                                             }
+                                                }
+                             },
+                   "objects":  {
+                                   "value":  [
+                                                 {
+                                                     "properties":  {
+                                                                        "fontSize":  {
+                                                                                         "expr":  {
+                                                                                                      "Literal":  {
+                                                                                                                      "Value":  "26D"
+                                                                                                                  }
+                                                                                                  }
+                                                                                     }
+                                                                    },
+                                                     "selector":  {
+                                                                      "id":  "default"
+                                                                  }
+                                                 }
+                                             ],
+                                   "label":  [
+                                                 {
+                                                     "properties":  {
+                                                                        "fontSize":  {
+                                                                                         "expr":  {
+                                                                                                      "Literal":  {
+                                                                                                                      "Value":  "11D"
+                                                                                                                  }
+                                                                                                  }
+                                                                                     }
+                                                                    },
+                                                     "selector":  {
+                                                                      "id":  "default"
+                                                                  }
+                                                 }
+                                             ],
+                                   "padding":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "paddingUniform":  {
+                                                                                                 "expr":  {
+                                                                                                              "Literal":  {
+                                                                                                                              "Value":  "8D"
+                                                                                                                          }
+                                                                                                          }
+                                                                                             }
+                                                                      },
+                                                       "selector":  {
+                                                                        "id":  "default"
+                                                                    }
+                                                   }
+                                               ],
+                                   "layout":  [
+                                                  {
+                                                      "properties":  {
+                                                                         "paddingUniform":  {
+                                                                                                "expr":  {
+                                                                                                             "Literal":  {
+                                                                                                                             "Value":  "0D"
+                                                                                                                         }
+                                                                                                         }
+                                                                                            }
+                                                                     },
+                                                      "selector":  {
+                                                                       "id":  "default"
+                                                                   }
+                                                  }
+                                              ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "padding":  [
+                                                                  {
+                                                                      "properties":  {
+                                                                                         "top":  {
+                                                                                                     "expr":  {
+                                                                                                                  "Literal":  {
+                                                                                                                                  "Value":  "8D"
+                                                                                                                              }
+                                                                                                              }
+                                                                                                 },
+                                                                                         "bottom":  {
+                                                                                                        "expr":  {
+                                                                                                                     "Literal":  {
+                                                                                                                                     "Value":  "8D"
+                                                                                                                                 }
+                                                                                                                 }
+                                                                                                    },
+                                                                                         "left":  {
+                                                                                                      "expr":  {
+                                                                                                                   "Literal":  {
+                                                                                                                                   "Value":  "12D"
+                                                                                                                               }
+                                                                                                               }
+                                                                                                  },
+                                                                                         "right":  {
+                                                                                                       "expr":  {
+                                                                                                                    "Literal":  {
+                                                                                                                                    "Value":  "12D"
+                                                                                                                                }
+                                                                                                                }
+                                                                                                   }
+                                                                                     },
+                                                                      "selector":  {
+                                                                                       "id":  "default"
+                                                                                   }
+                                                                  }
+                                                              ],
+                                                  "spacing":  [
+                                                                  {
+                                                                      "properties":  {
+                                                                                         "customizeSpacing":  {
+                                                                                                                  "expr":  {
+                                                                                                                               "Literal":  {
+                                                                                                                                               "Value":  "true"
+                                                                                                                                           }
+                                                                                                                           }
+                                                                                                              },
+                                                                                         "verticalSpacing":  {
+                                                                                                                 "expr":  {
+                                                                                                                              "Literal":  {
+                                                                                                                                              "Value":  "2D"
+                                                                                                                                          }
+                                                                                                                          }
+                                                                                                             }
+                                                                                     },
+                                                                      "selector":  {
+                                                                                       "id":  "default"
+                                                                                   }
+                                                                  }
+                                                              ]
+                                              }
+               }
+}

@@ -1,0 +1,43 @@
+// Crear cada expresión como una medida separada en Power BI.
+// Nombres de tabla correspondientes al modelo Import local del reporte.
+// Si Power BI renombra una tabla, adaptar únicamente su nombre, no la lógica.
+// Las expresiones usan coma como separador; si la instalación muestra punto y
+// coma, dejar que Power BI adapte el separador regional.
+
+Ventas netas =
+SUM ( FactSales[TotalVenta] )
+
+Unidades =
+SUM ( FactSales[Quantity] )
+
+Pedidos =
+DISTINCTCOUNT ( FactSales[OrderID] )
+
+Ticket promedio =
+DIVIDE ( [Ventas netas], [Pedidos] )
+
+Ventas brutas =
+SUMX (
+    FactSales,
+    FactSales[Quantity] * FactSales[UnitPrice]
+)
+
+Descuento monetario =
+[Ventas brutas] - [Ventas netas]
+
+Descuento efectivo % =
+DIVIDE ( [Descuento monetario], [Ventas brutas] )
+
+// Columna calculada usada por el modelo local para un eje cronológico continuo.
+
+AñoMes =
+IF (
+    'Date'[DateKey] = 0,
+    BLANK (),
+    DATE ( 'Date'[CalendarYear], 'Date'[MonthNumberOfYear], 1 )
+)
+
+// En Import, seleccionar Date[MonthName] y usar:
+// Herramientas de columna > Ordenar por columna > MonthNumberOfYear.
+// Formatear AñoMes como "MMM yyyy" o "yyyy-MM".
+
