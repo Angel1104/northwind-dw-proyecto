@@ -21,14 +21,17 @@ proyecto final:
 - **`NorthWindDW/`**: proyecto de SQL Server Database Project con el modelo
   dimensional (modelo estrella) derivado del OLTP, compuesto por una tabla
   de hechos y sus tablas de dimensión.
+- **`NorthWindETL/`**: proyecto de Integration Services (SSIS) que carga el
+  modelo dimensional desde el OLTP mediante procesos de carga incremental.
 
 ## Estructura del repositorio
 
 ```
 diseno/
-├── modelo-estrella.md       (justificacion del diseño: Fact, Dim, por que)
-├── diagrama-estrella.md     (diagrama entidad-relacion, Mermaid)
-└── pruebas-integridad.sql   (script de validacion del modelo implementado)
+├── modelo-estrella.md       (justificación del diseño: Fact, Dim, por qué)
+├── diagrama-estrella.md     (diagrama entidad-relación, Mermaid)
+├── reglas-negocio-etl.md    (arquitectura del ETL + reglas de negocio)
+└── pruebas-integridad.sql   (script de validación del modelo implementado)
 
 NorthWindOLTP/
 └── (SQL Server Database Project generado en Visual Studio, importando
@@ -37,6 +40,10 @@ NorthWindOLTP/
 NorthWindDW/
 └── (SQL Server Database Project generado en Visual Studio con las
     tablas de dimensiones y hechos del modelo estrella)
+
+NorthWindETL/
+└── (Proyecto de Integration Services con los paquetes de carga
+    incremental por rowversion)
 
 README.md
 ```
@@ -60,8 +67,18 @@ Resumen:
   - `DimDate` — dimensión de tiempo generada (no existe en el OLTP), con
     una fila por cada fecha del rango de operación del negocio.
 
+## ETL — Carga del Data Warehouse
+
+La carga del modelo dimensional se implementa en `NorthWindETL` (Integration
+Services) siguiendo un patrón de **carga incremental por `rowversion`**: cada
+tabla (dimensiones y `FactSales`) tiene su propio stored procedure de captura
+de cambios y registra la última versión procesada en `PackageConfig`, de modo
+que solo se leen los registros modificados desde la ejecución anterior.
+
+Los detalles de la arquitectura y las reglas de negocio del ETL están
+documentados en [`diseno/reglas-negocio-etl.md`](./diseno/reglas-negocio-etl.md).
+
 ## Flujo de trabajo del grupo
 
 Cada integrante trabaja en su propia rama y entrega su parte mediante un
-Pull Request hacia `main`:
-
+Pull Request hacia `main`
