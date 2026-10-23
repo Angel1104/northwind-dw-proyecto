@@ -9,6 +9,10 @@ Ciencia de Datos de la UMSS. El repositorio es:
 
 `https://github.com/Angel1104/northwind-dw-proyecto`
 
+Pull request abierto:
+
+`https://github.com/Angel1104/northwind-dw-proyecto/pull/7`
+
 La implementación está en la rama `feature/powerbi-angel`, creada desde
 `main` en el commit `6f7627e`. Revisa primero el PR abierto desde esa rama y no
 reconstruyas el reporte desde cero.

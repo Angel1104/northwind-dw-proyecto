@@ -8,6 +8,7 @@
 - Fecha de elaboración y validación: 23/10/2026.
 - Rama de trabajo: `feature/powerbi-angel`.
 - Base de la rama: `main`, commit `6f7627e`.
+- Pull request: <https://github.com/Angel1104/northwind-dw-proyecto/pull/7>.
 
 Integrantes:
 
