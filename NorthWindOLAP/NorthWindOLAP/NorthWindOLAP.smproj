@@ -35,9 +35,8 @@
     <DeploymentOptionDirectQueryMode>InMemory</DeploymentOptionDirectQueryMode>
     <DeploymentOptionQueryImpersonation>Default</DeploymentOptionQueryImpersonation>
   </PropertyGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Compile Include="Model.bim">
+    <Compile Include="NothWind.bim">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
