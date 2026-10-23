@@ -18,17 +18,19 @@
     ],
     "tables": [
       {
-        "name": "DimCustomer",
+        "name": "Customer",
         "columns": [
           {
             "name": "CustomerSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "CustomerSK",
             "sourceProviderType": "Integer"
           },
           {
             "name": "CustomerID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "CustomerID",
             "sourceProviderType": "WChar"
           },
@@ -41,18 +43,21 @@
           {
             "name": "ContactName",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "ContactName",
             "sourceProviderType": "WChar"
           },
           {
             "name": "ContactTitle",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "ContactTitle",
             "sourceProviderType": "WChar"
           },
           {
             "name": "Address",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Address",
             "sourceProviderType": "WChar"
           },
@@ -65,12 +70,14 @@
           {
             "name": "Region",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Region",
             "sourceProviderType": "WChar"
           },
           {
             "name": "PostalCode",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "PostalCode",
             "sourceProviderType": "WChar"
           },
@@ -83,24 +90,28 @@
           {
             "name": "Phone",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Phone",
             "sourceProviderType": "WChar"
           },
           {
             "name": "Fax",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Fax",
             "sourceProviderType": "WChar"
           },
           {
             "name": "CustomerTypeID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "CustomerTypeID",
             "sourceProviderType": "WChar"
           },
           {
             "name": "CustomerDesc",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "CustomerDesc",
             "sourceProviderType": "WChar"
           }
@@ -132,47 +143,54 @@
         ]
       },
       {
-        "name": "DimDate",
+        "name": "Date",
         "columns": [
           {
             "name": "DateKey",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "DateKey",
             "sourceProviderType": "Integer"
           },
           {
             "name": "FullDate",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "FullDate",
             "sourceProviderType": "WChar"
           },
           {
             "name": "DayNumberOfWeek",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "DayNumberOfWeek",
             "sourceProviderType": "UnsignedTinyInt"
           },
           {
             "name": "DayNameOfWeek",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "DayNameOfWeek",
             "sourceProviderType": "WChar"
           },
           {
             "name": "DayNumberOfMonth",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "DayNumberOfMonth",
             "sourceProviderType": "UnsignedTinyInt"
           },
           {
             "name": "DayNumberOfYear",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "DayNumberOfYear",
             "sourceProviderType": "SmallInt"
           },
           {
             "name": "WeekNumberOfYear",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "WeekNumberOfYear",
             "sourceProviderType": "UnsignedTinyInt"
           },
@@ -185,12 +203,14 @@
           {
             "name": "MonthNumberOfYear",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "MonthNumberOfYear",
             "sourceProviderType": "UnsignedTinyInt"
           },
           {
             "name": "CalendarQuarter",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "CalendarQuarter",
             "sourceProviderType": "UnsignedTinyInt"
           },
@@ -203,6 +223,7 @@
           {
             "name": "CalendarSemester",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "CalendarSemester",
             "sourceProviderType": "UnsignedTinyInt"
           }
@@ -234,29 +255,33 @@
         ]
       },
       {
-        "name": "DimEmployee",
+        "name": "Employee",
         "columns": [
           {
             "name": "EmployeeSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "EmployeeSK",
             "sourceProviderType": "Integer"
           },
           {
             "name": "EmployeeID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "EmployeeID",
             "sourceProviderType": "Integer"
           },
           {
             "name": "LastName",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "LastName",
             "sourceProviderType": "WChar"
           },
           {
             "name": "FirstName",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "FirstName",
             "sourceProviderType": "WChar"
           },
@@ -269,6 +294,7 @@
           {
             "name": "TitleOfCourtesy",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "TitleOfCourtesy",
             "sourceProviderType": "WChar"
           },
@@ -289,6 +315,7 @@
           {
             "name": "Address",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Address",
             "sourceProviderType": "WChar"
           },
@@ -301,12 +328,14 @@
           {
             "name": "Region",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Region",
             "sourceProviderType": "WChar"
           },
           {
             "name": "PostalCode",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "PostalCode",
             "sourceProviderType": "WChar"
           },
@@ -319,30 +348,35 @@
           {
             "name": "HomePhone",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "HomePhone",
             "sourceProviderType": "WChar"
           },
           {
             "name": "Extension",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Extension",
             "sourceProviderType": "WChar"
           },
           {
             "name": "Notes",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Notes",
             "sourceProviderType": "WChar"
           },
           {
             "name": "ReportsTo",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ReportsTo",
             "sourceProviderType": "Integer"
           },
           {
             "name": "TerritoryID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "TerritoryID",
             "sourceProviderType": "WChar"
           },
@@ -355,6 +389,7 @@
           {
             "name": "RegionID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "RegionID",
             "sourceProviderType": "Integer"
           },
@@ -363,6 +398,13 @@
             "dataType": "string",
             "sourceColumn": "RegionDescription",
             "sourceProviderType": "WChar"
+          },
+          {
+            "type": "calculated",
+            "name": "Full Name",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(CONCATENATE(Employee[FirstName],\" \"),Employee[LastName])"
           }
         ],
         "partitions": [
@@ -392,17 +434,19 @@
         ]
       },
       {
-        "name": "DimProduct",
+        "name": "Product",
         "columns": [
           {
             "name": "ProductSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ProductSK",
             "sourceProviderType": "Integer"
           },
           {
             "name": "ProductID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ProductID",
             "sourceProviderType": "Integer"
           },
@@ -415,6 +459,7 @@
           {
             "name": "QuantityPerUnit",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "QuantityPerUnit",
             "sourceProviderType": "WChar"
           },
@@ -440,18 +485,21 @@
           {
             "name": "UnitsOnOrder",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "UnitsOnOrder",
             "sourceProviderType": "SmallInt"
           },
           {
             "name": "ReorderLevel",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ReorderLevel",
             "sourceProviderType": "SmallInt"
           },
           {
             "name": "Discontinued",
             "dataType": "boolean",
+            "isHidden": true,
             "sourceColumn": "Discontinued",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "sourceProviderType": "Boolean"
@@ -459,6 +507,7 @@
           {
             "name": "CategoryID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "CategoryID",
             "sourceProviderType": "Integer"
           },
@@ -471,12 +520,14 @@
           {
             "name": "Description",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Description",
             "sourceProviderType": "WChar"
           },
           {
             "name": "SupplierID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "SupplierID",
             "sourceProviderType": "Integer"
           },
@@ -526,17 +577,19 @@
         ]
       },
       {
-        "name": "DimShipper",
+        "name": "Shipper",
         "columns": [
           {
             "name": "ShipperSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ShipperSK",
             "sourceProviderType": "Integer"
           },
           {
             "name": "ShipperID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ShipperID",
             "sourceProviderType": "Integer"
           },
@@ -549,6 +602,7 @@
           {
             "name": "Phone",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Phone",
             "sourceProviderType": "WChar"
           }
@@ -585,54 +639,63 @@
           {
             "name": "OrderID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "OrderID",
             "sourceProviderType": "Integer"
           },
           {
             "name": "ProductID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ProductID",
             "sourceProviderType": "Integer"
           },
           {
             "name": "OrderDateKey",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "OrderDateKey",
             "sourceProviderType": "Integer"
           },
           {
             "name": "RequiredDateKey",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "RequiredDateKey",
             "sourceProviderType": "Integer"
           },
           {
             "name": "ShippedDateKey",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ShippedDateKey",
             "sourceProviderType": "Integer"
           },
           {
             "name": "CustomerSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "CustomerSK",
             "sourceProviderType": "Integer"
           },
           {
             "name": "ProductSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ProductSK",
             "sourceProviderType": "Integer"
           },
           {
             "name": "EmployeeSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "EmployeeSK",
             "sourceProviderType": "Integer"
           },
           {
             "name": "ShipperSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ShipperSK",
             "sourceProviderType": "Integer"
           },
@@ -720,7 +783,7 @@
         "name": "f217326a-a0db-4dc7-a8ed-3f69bc70c0eb",
         "fromTable": "FactSales",
         "fromColumn": "RequiredDateKey",
-        "toTable": "DimDate",
+        "toTable": "Date",
         "toColumn": "DateKey",
         "isActive": false
       },
@@ -728,7 +791,7 @@
         "name": "520963ed-3887-4745-9126-3490e3d651ae",
         "fromTable": "FactSales",
         "fromColumn": "ShippedDateKey",
-        "toTable": "DimDate",
+        "toTable": "Date",
         "toColumn": "DateKey",
         "isActive": false
       },
@@ -736,35 +799,35 @@
         "name": "4680aff8-2413-45dc-8311-3020c90f9b4f",
         "fromTable": "FactSales",
         "fromColumn": "CustomerSK",
-        "toTable": "DimCustomer",
+        "toTable": "Customer",
         "toColumn": "CustomerSK"
       },
       {
         "name": "4753cfa0-5acd-4ac3-b3bf-c03e9cd8d016",
         "fromTable": "FactSales",
         "fromColumn": "OrderDateKey",
-        "toTable": "DimDate",
+        "toTable": "Date",
         "toColumn": "DateKey"
       },
       {
         "name": "a03a6f64-e61a-4108-b7f9-58401b43fd33",
         "fromTable": "FactSales",
         "fromColumn": "EmployeeSK",
-        "toTable": "DimEmployee",
+        "toTable": "Employee",
         "toColumn": "EmployeeSK"
       },
       {
         "name": "c6ae5982-a18b-407d-b369-cd8689232767",
         "fromTable": "FactSales",
         "fromColumn": "ProductSK",
-        "toTable": "DimProduct",
+        "toTable": "Product",
         "toColumn": "ProductSK"
       },
       {
         "name": "2f681db1-8fd3-4003-bf7a-8f603248c05a",
         "fromTable": "FactSales",
         "fromColumn": "ShipperSK",
-        "toTable": "DimShipper",
+        "toTable": "Shipper",
         "toColumn": "ShipperSK"
       }
     ],
