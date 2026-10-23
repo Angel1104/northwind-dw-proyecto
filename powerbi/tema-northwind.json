@@ -1,0 +1,19 @@
+{
+  "name": "NorthWind claro",
+  "dataColors": [
+    "#2F6B9A",
+    "#E38B2C",
+    "#3A8D7D",
+    "#7A5AA6",
+    "#C64F55",
+    "#6E7F8D",
+    "#D1A737",
+    "#4C8BC0"
+  ],
+  "background": "#F7F9FC",
+  "foreground": "#17324D",
+  "tableAccent": "#2F6B9A",
+  "good": "#2E7D32",
+  "neutral": "#D1A737",
+  "bad": "#C62828"
+}
